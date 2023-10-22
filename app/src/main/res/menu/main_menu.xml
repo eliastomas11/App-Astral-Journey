@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/horoscopoScreen"
+        android:title="@string/horoscope_bottom_title"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_horoscope_star_zodiac"/>
+
+    <item
+        android:id="@+id/luckScreen"
+        android:title="@string/luck_bottom_title"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/fortune_teller_2_svgrepo_com"/>
+
+    <item
+        android:id="@+id/palmstryScreen"
+        android:title="@string/palmstry_bottom_title"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_hand"/>
+
+
+</menu>

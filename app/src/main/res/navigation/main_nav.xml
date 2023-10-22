@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/horoscopeScreen">
+
+    <fragment
+        android:id="@+id/horoscopeScreen"
+        android:name="com.example.astraljourney.ui.main.horoscope.HoroscopeScreen"
+        android:label="HoroscopeScreen" />
+    <fragment
+        android:id="@+id/palmstryScreen2"
+        android:name="com.example.astraljourney.ui.main.palmstry.PalmstryScreen"
+        android:label="PalmstryScreen" />
+    <fragment
+        android:id="@+id/luckScreen2"
+        android:name="com.example.astraljourney.ui.main.luck.LuckScreen"
+        android:label="LuckScreen" />
+</navigation>
