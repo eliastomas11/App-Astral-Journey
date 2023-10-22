@@ -1,20 +1,20 @@
-package com.example.astraljourney.ui.main.horoscope
+package com.example.astraljourney.ui.main.horoscope.recycler
 
 import android.view.View
 import android.view.animation.LinearInterpolator
 import androidx.recyclerview.widget.RecyclerView
 import com.example.astraljourney.databinding.ZodiacItemListBinding
-import com.example.astraljourney.domain.ZodiacSign
+import com.example.astraljourney.domain.ZodiacSignInfo
 
 class HoroscopoViewHolder(private val binding: ZodiacItemListBinding) :
     RecyclerView.ViewHolder(binding.root) {
-    fun bind(zodiacSign: ZodiacSign, action: (zodiacSign: ZodiacSign) -> Unit) {
-        zodiacSign.apply {
+    fun bind(zodiacSignInfo: ZodiacSignInfo, action: (zodiacSignInfo: ZodiacSignInfo) -> Unit) {
+        zodiacSignInfo.apply {
             binding.ivZodiacItem.setImageResource(image)
             binding.tvZodiacItem.text = binding.root.context.getString(name)
             binding.root.setOnClickListener {
                 startRotationAnim(binding.root, endAnimationListener = {
-                    action(zodiacSign)
+                    action(zodiacSignInfo)
                 })
             }
         }

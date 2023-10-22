@@ -2,7 +2,7 @@ package com.example.astraljourney.ui.main.horoscope
 
 import androidx.lifecycle.ViewModel
 import com.example.astraljourney.domain.GetZodiacSign
-import com.example.astraljourney.domain.ZodiacSign
+import com.example.astraljourney.domain.ZodiacSignInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,11 +16,11 @@ class HoroscopoViewModel @Inject constructor(private val getZodiacSign: GetZodia
 
     init {
         _horoscopoUIState.value.apply {
-            copy(zodiacSignItemsList = getZodiacSign())
+            copy(zodiacSignInfoItemsList = getZodiacSign())
         }
     }
     data class HoroscopoUiState(
         val loading: Boolean = false,
-        val zodiacSignItemsList: List<ZodiacSign> = emptyList(),
+        val zodiacSignInfoItemsList: List<ZodiacSignInfo> = emptyList(),
     )
 }

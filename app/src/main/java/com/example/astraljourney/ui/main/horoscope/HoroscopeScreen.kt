@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.LinearInterpolator
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -12,9 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.astraljourney.R
 import com.example.astraljourney.databinding.FragmentHoroscopoScreenBinding
-import com.example.astraljourney.databinding.FragmentLuckScreenBinding
-import com.example.astraljourney.ui.main.luck.LuckViewModel
+import com.example.astraljourney.ui.main.horoscope.recycler.HoroscopoAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -26,9 +25,8 @@ class HoroscopeScreen : Fragment() {
 
     private val horoscopoViewModel by viewModels<HoroscopoViewModel>()
 
-    private val horoscopoAdapter = HoroscopoAdapter(){
-        findNavController().navigate()
-        startRotationAnim()
+    private val horoscopoAdapter = HoroscopoAdapter(){ zodiac ->
+        findNavController().navigate(HoroscopeScreenDirections.actionHoroscopeScreenToHoroscopoDetailActivity(type = zodiac.id))
     }
 
     override fun onCreateView(
@@ -62,7 +60,7 @@ class HoroscopeScreen : Fragment() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 horoscopoViewModel.horoscopoUiState.collect {
-                    horoscopoAdapter.updateList(it.zodiacSignItemsList)
+                    horoscopoAdapter.updateList(it.zodiacSignInfoItemsList)
                 }
             }
         }
