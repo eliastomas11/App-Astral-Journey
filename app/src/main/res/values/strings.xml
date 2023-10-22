@@ -4,4 +4,16 @@
     <string name="luck_bottom_title">Luck</string>
     <string name="palmstry_bottom_title">Palmstry</string>
     <string name="app_toolbar_title">AstralJourney</string>
+    <string name="aries_zodiac_name">Aries</string>
+    <string name="taurus_zodiac_name">Taurus</string>
+    <string name="gemini_zodiac_name">Gemini</string>
+    <string name="cancer_zodiac_name">Cancer</string>
+    <string name="leo_zodiac_name">Leo</string>
+    <string name="virgo_zodiac_name">Virgo</string>
+    <string name="libra_zodiac_name">Libra</string>
+    <string name="scorpio_zodiac_name">Scorpio</string>
+    <string name="sagittarius_zodiac_name">Sagittarius</string>
+    <string name="capricorn_zodiac_name">Capricorn</string>
+    <string name="aquarius_zodiac_name">Aquarius</string>
+    <string name="pisces_zodiac_name">Pisces</string>
 </resources>
