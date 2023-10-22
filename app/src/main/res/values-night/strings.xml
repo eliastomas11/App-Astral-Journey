@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">AstralJourney</string>
+    <string name="horoscope_bottom_title">Horoscope</string>
     <string name="luck_bottom_title">Luck</string>
     <string name="palmstry_bottom_title">Palmstry</string>
+    <string name="app_toolbar_title">AstralJourney</string>
 </resources>
