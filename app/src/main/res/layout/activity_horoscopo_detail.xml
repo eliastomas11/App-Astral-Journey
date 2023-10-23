@@ -3,7 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.horoscopodetail.HoroscopoDetailActivity">
+    android:layout_height="match_parent">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/detailToolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:navigationIconTint="?attr/colorOnSurface"
+        app:title="@string/app_toolbar_title">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ivToolbarBackground"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailToolbar"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/aries_anim"
+        app:lottie_repeatMode="restart" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDetailTitle"
+        style="@style/Widget.Text.Title"
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivToolbarBackground"
+        app:textAllCaps="true"
+        tools:text="Title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDetailDescription"
+        style="@style/Widget.Text.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_margin="32dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailTitle"
+        tools:text="dsafsgagbf" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:indeterminateTint="?attr/colorOnSurface"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

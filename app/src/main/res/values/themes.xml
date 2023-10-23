@@ -34,9 +34,21 @@
         <item name="fontFamily">@font/abril_fatface</item>
     </style>
 
-    <style name="Widget.Text.List" parent="TextAppearance.Material3.HeadlineLarge">
+    <style name="Widget.Text.Title" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/abril_fatface</item>
         <item name="android:layout_margin">8dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.Text.Subtitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/spectral_sc_medium_italic</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.Text.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/vesper_libre_medium</item>
+        <item name="android:layout_margin">16dp</item>
         <item name="android:textAlignment">center</item>
     </style>
 

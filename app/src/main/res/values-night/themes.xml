@@ -1,6 +1,7 @@
 
 <resources>
     <style name="Theme.AstralJourney" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="toolbarStyle">@style/Widget.AstralJourney.Toolbar</item>
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
@@ -34,9 +35,28 @@
         <item name="fontFamily">@font/abril_fatface</item>
     </style>
 
-    <style name="Widget.Text.List" parent="TextAppearance.Material3.HeadlineLarge">
+    <style name="Widget.AstralJourney.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/Widget.Toolbar.AstralJourney.Title</item>
+        <item name="android:background">@color/dark_tooblar</item>
+        <item name="titleCentered">true</item>
+    </style>
+    <style name="Widget.Text.Title" parent="TextAppearance.Material3.TitleLarge">
         <item name="fontFamily">@font/abril_fatface</item>
         <item name="android:layout_margin">8dp</item>
         <item name="android:textAlignment">center</item>
     </style>
+
+    <style name="Widget.Text.Body" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/vesper_libre_medium</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.Text.Subtitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/spectral_sc_medium_italic</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+
 </resources>

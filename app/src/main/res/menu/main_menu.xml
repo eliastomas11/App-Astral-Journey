@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/horoscopoScreen"
+        android:id="@+id/horoscopeScreen"
         android:title="@string/horoscope_bottom_title"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_horoscope_star_zodiac"/>
 
     <item
-        android:id="@+id/luckScreen"
+        android:id="@+id/luckScreen2"
         android:title="@string/luck_bottom_title"
         app:showAsAction="ifRoom"
         android:icon="@drawable/fortune_teller_2_svgrepo_com"/>
 
     <item
-        android:id="@+id/palmstryScreen"
+        android:id="@+id/palmstryScreen2"
         android:title="@string/palmstry_bottom_title"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_hand"/>

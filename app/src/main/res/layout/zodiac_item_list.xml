@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Elevated"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
         android:id="@+id/ivZodiacItem"
-        android:layout_height="wrap_content"
-        tools:src="@mipmap/ic_launcher"
-        android:layout_margin="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        tools:src="@mipmap/ic_launcher" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:layout_width="0dp"
         android:id="@+id/tvZodiacItem"
+        style="@style/Widget.Text.Title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.Text.List"
-        tools:text="Aries"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivZodiacItem" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="bottom"
+        android:textAllCaps="true"
+        tools:text="Aries" />
+
+
+</LinearLayout>
+

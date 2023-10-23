@@ -11,7 +11,8 @@
         android:label="HoroscopeScreen" >
         <action
             android:id="@+id/action_horoscopeScreen_to_horoscopoDetailActivity"
-            app:destination="@id/horoscopoDetailActivity" />
+            app:destination="@id/horoscopoDetailActivity"
+            app:enterAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/palmstryScreen2"
