@@ -11,6 +11,7 @@ import androidx.navigation.navArgs
 import com.example.astraljourney.R
 import com.example.astraljourney.databinding.ActivityHoroscopoDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -39,7 +40,7 @@ class HoroscopoDetailActivity : AppCompatActivity() {
         lifecycleScope.launch {
             horoscopoDetailViewModel.onInitialize(navArgs.type)
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                horoscopoDetailViewModel.detailUiState.collect { uiState ->
+                horoscopoDetailViewModel.detailUiState.collect{ uiState ->
                     binding.progressBar.visibility = if (uiState.loading) View.VISIBLE else View.GONE
                     binding.tvDetailTitle.text = uiState.title
                     binding.tvDetailDescription.text = uiState.description

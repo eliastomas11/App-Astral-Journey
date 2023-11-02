@@ -56,7 +56,7 @@ class HoroscopeScreen : Fragment() {
     }
 
     private fun initUiState() {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 horoscopoViewModel.horoscopoUiState.collect {
                     horoscopoAdapter.updateList(it.zodiacSignInfoItemsList)
