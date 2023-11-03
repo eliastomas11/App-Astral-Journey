@@ -2,6 +2,7 @@ package com.example.astraljourney.ui.main.horoscopodetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Lifecycle
@@ -37,13 +38,19 @@ class HoroscopoDetailActivity : AppCompatActivity() {
     }
 
     private fun initUiState() {
+        horoscopoDetailViewModel.onInitialize(navArgs.zodiacSelected)
         lifecycleScope.launch {
-            horoscopoDetailViewModel.onInitialize(navArgs.type)
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                horoscopoDetailViewModel.detailUiState.collect{ uiState ->
-                    binding.progressBar.visibility = if (uiState.loading) View.VISIBLE else View.GONE
-                    binding.tvDetailTitle.text = uiState.title
-                    binding.tvDetailDescription.text = uiState.description
+                horoscopoDetailViewModel.detailUiState.collect { uiState ->
+                    if (uiState.error == null && uiState.image != 0) {
+                        binding.progressBar.visibility =
+                            if (uiState.loading) View.VISIBLE else View.GONE
+                        binding.tvDetailTitle.text = uiState.title
+                        binding.tvDetailDescription.text = uiState.description
+                        binding.ivToolbarBackground.setAnimation(uiState.image)
+                    } else {
+                        binding.tvDetailTitle.text = uiState.error
+                    }
                 }
             }
         }

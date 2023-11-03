@@ -12,7 +12,7 @@
         <action
             android:id="@+id/action_horoscopeScreen_to_horoscopoDetailActivity"
             app:destination="@id/horoscopoDetailActivity"
-            app:enterAnim="@android:anim/fade_out" />
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/palmstryScreen2"
@@ -28,7 +28,7 @@
         android:label="activity_horoscopo_detail"
         tools:layout="@layout/activity_horoscopo_detail" >
         <argument
-            android:name="type"
+            android:name="zodiacSelected"
             app:argType="com.example.astraljourney.domain.ZodiacModel" />
     </activity>
 </navigation>

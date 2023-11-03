@@ -62,4 +62,6 @@
     <color name="md_theme_dark_outlineVariant">#44474F</color>
     <color name="md_theme_dark_scrim">#000000</color>
     <color name="dark_tooblar">#101010</color>
+    <color name="preview_dark_color">#1E090909</color>
+    <color name="animation_background_color">#2F2F2F</color>
 </resources>

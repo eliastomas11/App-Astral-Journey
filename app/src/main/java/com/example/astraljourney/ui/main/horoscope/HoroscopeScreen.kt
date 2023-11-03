@@ -25,7 +25,7 @@ class HoroscopeScreen : Fragment() {
     private val horoscopoViewModel by viewModels<HoroscopoViewModel>()
 
     private val horoscopoAdapter = HoroscopoAdapter(){ zodiac ->
-        findNavController().navigate(HoroscopeScreenDirections.actionHoroscopeScreenToHoroscopoDetailActivity(type = zodiac.zodiacModel))
+        findNavController().navigate(HoroscopeScreenDirections.actionHoroscopeScreenToHoroscopoDetailActivity(zodiacSelected = zodiac.zodiacModel))
     }
 
     override fun onCreateView(
@@ -52,7 +52,6 @@ class HoroscopeScreen : Fragment() {
             adapter = horoscopoAdapter
             layoutManager = GridLayoutManager(context, 2)
         }
-        binding.horoscopoRecyclerView.adapter = horoscopoAdapter
     }
 
     private fun initUiState() {

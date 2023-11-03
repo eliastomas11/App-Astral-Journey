@@ -15,9 +15,10 @@ class HoroscopoViewHolder(private val binding: ZodiacItemListBinding) :
             binding.ivZodiacItem.setImageResource(zodiacSignInfo.zodiacModel.image)
             binding.tvZodiacItem.text = binding.root.context.getString(name)
             binding.root.setOnClickListener {
-                startRotationAnim(binding.root, endAnimationListener = {
-                    action(zodiacSignInfo)
-                })
+                action(zodiacSignInfo)
+//                startRotationAnim(binding.root, endAnimationListener = {
+//
+//                })
             }
         }
     }
