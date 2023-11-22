@@ -23,7 +23,7 @@ class HoroscopoDetailViewModel @Inject constructor(private val getZodiacSignInfo
     fun onInitialize(zodiacModel: ZodiacModel) {
         viewModelScope.launch {
             try {
-                val result = getZodiacSignInfo(zodiacModel.name)
+                val result = getZodiacSignInfo(zodiacModel.name.lowercase())
                 _detailUiState.update {
                     it.copy(
                         loading = false,

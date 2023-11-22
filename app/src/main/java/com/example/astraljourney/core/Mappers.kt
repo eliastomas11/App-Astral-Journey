@@ -8,15 +8,15 @@ fun ZodiacSignResponse.toDomain(): ZodiacSign = ZodiacSign(zodiacModel = this.to
 
 fun ZodiacSignResponse.toZodiacModel() : ZodiacModel = when (this.sign) {
     "Aries" -> ZodiacModel.Aries
-    "Taurus" -> ZodiacModel.Tauro
+    "Taurus" -> ZodiacModel.Taurus
     "Gemini" -> ZodiacModel.Gemini
     "Cancer" -> ZodiacModel.Cancer
     "Leo" -> ZodiacModel.Leo
     "Virgo" -> ZodiacModel.Virgo
     "Libra" -> ZodiacModel.Libra
-    "Scorpio" -> ZodiacModel.Escorpio
-    "Sagittarius" -> ZodiacModel.Sagitario
-    "Capricorn" -> ZodiacModel.Capricornio
-    "Aquarius" -> ZodiacModel.Acuario
-    else -> {ZodiacModel.Piscis}
+    "Scorpio" -> ZodiacModel.Scorpio
+    "Sagittarius" -> ZodiacModel.Sagittarius
+    "Capricorn" -> ZodiacModel.Capricorn
+    "Aquarius" -> ZodiacModel.Aquarius
+    else -> {ZodiacModel.Pisces}
 }
